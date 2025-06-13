@@ -1,38 +1,231 @@
-.App {
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #000;
+  color: #fff;
+}
+
+h1,
+h2 {
+  font-family: "Montserrat", sans-serif;
+}
+.app {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.header {
+  position: relative;
+  height: 250px;
+  background-image: url("/public/imgs/rest.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6); /* Oscurece la imagen */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+}
+
+.restaurant-name {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.restaurant-desc {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-top: 0.5rem;
+}
+
+.menu {
+  padding: 1rem;
+}
+
+.dish {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+.dish-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 2px solid #c8b76a;
+  align-self: center;
+}
+
+.dish-info {
+  flex: 1;
+}
+
+.dish-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dish-title h2 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.dish-title span {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.dish-info p {
+  margin-top: -10px !important;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+.price-tag {
+  background-color: #c8b76a; /* tono beige claro */
+  font-weight: bold;
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+.menu-section h2 {
+  position: relative;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  text-align: left;
+  color: #fff;
+}
+
+.menu-section h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 85%;
+  height: 3px;
+  background-color: #c8b76a;
+  border-radius: 999px;
+}
+
+.contact-section h2 {
+  position: relative;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  text-align: left;
+  color: #fff;
+}
+
+.contact-section h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 85%;
+  height: 3px;
+  background-color: #c8b76a;
+  border-radius: 999px;
+}
+
+/* Mapa */
+
+.map-container {
+  margin-top: 1rem;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Galeria*/
+
+.gallery-section {
+  margin: 2rem 0;
+}
+
+.gallery-section h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.gallery-section h2::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 85%;
+  height: 3px;
+  background-color: #c8b76a;
+  border-radius: 999px;
+}
+
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 1rem;
+  padding-bottom: 1rem;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-image {
+  flex: 0 0 auto;
+  width: 250px;
+  height: 160px;
+  border-radius: 12px;
+  object-fit: cover;
+  scroll-snap-align: start;
+  border: 2px solid #c8b76a;
+}
+
+/* Filtro carta*/
+
+.menu-filter {
+  padding: 1rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.filter-title {
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 0.8rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.chip-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.chip {
+  background-color: #c8b76a;
+  font-weight: bold;
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  color: #fff;
 }
