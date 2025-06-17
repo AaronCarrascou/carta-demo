@@ -73,8 +73,13 @@ const Section = ({ title, items, sectionId }) => (
 
 const scrollToSection = (id) => {
   const el = document.getElementById(id);
-  if (el) {
-    el.scrollIntoView({ behavior: "smooth" });
+  const sticky = document.querySelector(".menu-filter");
+
+  if (el && sticky) {
+    const stickyHeight = sticky.offsetHeight;
+    const y = el.getBoundingClientRect().top + window.pageYOffset - stickyHeight;
+
+    window.scrollTo({ top: y, behavior: "smooth" });
   }
 };
 

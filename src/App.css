@@ -202,6 +202,10 @@ h2 {
 /* Filtro carta*/
 
 .menu-filter {
+  position: sticky;
+  top: 0;
+  z-index: 1000; 
+  background-color: #000; 
   padding: 1rem;
   text-align: center;
 }
