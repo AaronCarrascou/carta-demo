@@ -1,0 +1,217 @@
+/* cartaDemo.module.css */
+
+.back{
+  background-color: #000;
+}
+.app {
+  max-width: 600px;
+  margin: 0 auto;
+  font-family: "Poppins", sans-serif;
+  background-color: #000;
+  color: #fff;
+}
+
+.header {
+  position: relative;
+  height: 250px;
+  background-image: url("/public/imgs/rest.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+}
+
+.restaurantName {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.restaurantDesc {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-top: 0.5rem;
+}
+
+.menu {
+  padding: 1rem;
+}
+
+.dish {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.dishImage {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 2px solid #c8b76a;
+  align-self: center;
+}
+
+.dishInfo {
+  flex: 1;
+}
+
+.dishTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dishInfo p {
+  margin-top: -10px !important;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+.priceTag {
+  background-color: #c8b76a;
+  font-weight: bold;
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+.menuSection h2 {
+  position: relative;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  text-align: left;
+  color: #fff;
+}
+
+.menuSection h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 85%;
+  height: 3px;
+  background-color: #c8b76a;
+  border-radius: 999px;
+}
+
+.contactSection h2 {
+  position: relative;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  text-align: left;
+  color: #fff;
+}
+
+.contactSection h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 85%;
+  height: 3px;
+  background-color: #c8b76a;
+  border-radius: 999px;
+}
+
+.mapContainer {
+  margin-top: 1rem;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.gallerySection {
+  margin: 2rem 0;
+}
+
+.gallerySection h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.gallerySection h2::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 85%;
+  height: 3px;
+  background-color: #c8b76a;
+  border-radius: 999px;
+}
+
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 1rem;
+  padding-bottom: 1rem;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.carouselImage {
+  flex: 0 0 auto;
+  width: 250px;
+  height: 160px;
+  border-radius: 12px;
+  object-fit: cover;
+  scroll-snap-align: start;
+  border: 2px solid #c8b76a;
+}
+
+.menuFilter {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #000;
+  padding: 1rem;
+  text-align: center;
+}
+
+.filterTitle {
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 0.8rem;
+}
+
+.chipContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.chip {
+  background-color: #c8b76a;
+  font-weight: bold;
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  color: #fff;
+}
